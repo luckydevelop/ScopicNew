@@ -15,7 +15,7 @@ Feature: Login with email
     And Error message "<passwordError>" appears in password field
     Examples:
       | login                | password   | usernameError | passwordError    |
-     |                      |            | Required      | Required         |
+      |                      |            | Required      | Required         |
       | olegmarket@gmail.com |            |               | Required         |
       | olegmarket@gmail.com | invalidPas |               | Invalid password |
       |                      | 123456     | Required      |                  |

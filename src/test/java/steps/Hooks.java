@@ -19,16 +19,6 @@ public class Hooks {
     {
        System.setProperty("webdriver.chrome.driver", PropertiesFromFile.getProperties().getProperty("driver.chrome.path"));
        Configuration.browser = PropertiesFromFile.getProperties().getProperty("browser");
-
-       // Configuration.browser="gecko";
-       // System.setProperty("webdriver.gecko.driver", "K:\\Job\\Testing\\ScopicNew\\src\\main\\resources\\drivers\\geckodriver.exe");
-        //Configuration.browser = "firefox";
-
-
-        //Configuration.browser="edge";
-        //System.setProperty("webdriver.edge.driver", "K:\\Job\\Testing\\ScopicNew\\src\\main\\resources\\drivers\\MicrosoftWebDriver.exe");
-
-
     }
 
     @After

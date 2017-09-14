@@ -1,1 +1,3 @@
-2017-09-13 20:13:58 INFO  SignInPopUp:31 - olegmarket@gmail.com
+2017-09-14 11:47:30 INFO  SignInPopUp:31 - olegmarket@gmail.com
+2017-09-14 11:47:43 INFO  CreateNewPostPopUp:41 - Error message Media cannot be blank. is present on the page - true
+2017-09-14 11:47:43 INFO  CreateNewPostPopUp:41 - Error message Ad Type cannot be blank. is present on the page - true
