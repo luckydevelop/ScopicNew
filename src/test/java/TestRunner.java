@@ -4,8 +4,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features"
-        , glue = "steps")
+         features = "src/test/resources/features"
+        ,glue = "steps"
+       ,format = {"pretty", "html:src/test/resources/reports"}
+)
 
 public class TestRunner {
 }
