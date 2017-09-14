@@ -3,16 +3,15 @@ package steps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import helpers.Helper;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LandingPage;
 import popups.SignInPopUp;
 
 public class LoginWithEmailSteps {
-    LandingPage landingPage = new LandingPage();
-    SignInPopUp signInPopUp = new SignInPopUp();
-    HomePage homePage = new HomePage();
+    private LandingPage landingPage = new LandingPage();
+    private SignInPopUp signInPopUp = new SignInPopUp();
+    private HomePage homePage = new HomePage();
 
     @Given("^LandingPage is opened$")
     public void homepage_is_opened() {
@@ -25,7 +24,7 @@ public class LoginWithEmailSteps {
     }
 
     @When("^SignIn popup is loaded$")
-    public void signin_popup_is_loaded()  {
+    public void signin_popup_is_loaded() {
         signInPopUp.allElementsLoaded();
     }
 
@@ -42,7 +41,7 @@ public class LoginWithEmailSteps {
     }
 
     @Then("^Error message \"(.*)\" appears in username field$")
-    public void error_message_appears_in_username_field(String errorMessage){
+    public void error_message_appears_in_username_field(String errorMessage) {
         Assert.assertEquals(String.format("Expected error message should be - %s", errorMessage), errorMessage, signInPopUp.getUsernameFieldError());
     }
 

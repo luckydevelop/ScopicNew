@@ -5,14 +5,10 @@ import com.codeborne.selenide.Condition;
 import helpers.Helper;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.actions;
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class CreateNewPostPopUp {
 
@@ -33,16 +29,16 @@ public class CreateNewPostPopUp {
 
     private final String ERRORS_XPATH_CONTAINS = ".//span[contains(text(), '%s')]";
 
-    final static Logger logger = Logger.getLogger(CreateNewPostPopUp.class);
+    private final static Logger logger = Logger.getLogger(CreateNewPostPopUp.class);
 
 
-    public boolean isErrorPresent(String error){
-       boolean res =  $(By.xpath(String.format(ERRORS_XPATH_CONTAINS, error))).isDisplayed();
-       logger.info(String.format("Error message %s is present on the page - %s", error, res));
-       return res;
+    private boolean isErrorPresent(String error) {
+        boolean res = $(By.xpath(String.format(ERRORS_XPATH_CONTAINS, error))).isDisplayed();
+        logger.info(String.format("Error message %s is present on the page - %s", error, res));
+        return res;
     }
 
-    public boolean areErrorsPresent(String errors){
+    public boolean areErrorsPresent(String errors) {
         Helper.waitMillis(1000);
         String errorsArray[] = errors.split(", ");
         for (String error : errorsArray) {
@@ -62,7 +58,7 @@ public class CreateNewPostPopUp {
         $(By.linkText(mediaType)).click();
     }
 
-    public void browseFile() {
+    private void browseFile() {
         $(By.xpath(BUTTON_BROWSE_FILE_XPATH)).click();
     }
 
@@ -79,11 +75,11 @@ public class CreateNewPostPopUp {
         $(By.xpath(BUTTON_CREATE_ENVYGRAM_XPATH)).click();
     }
 
-    public void clickButtonRepostEnvygram() {
+    private void clickButtonRepostEnvygram() {
         $(By.linkText(BUTTON_REPOST_ENVYGRAM_LINK)).click();
     }
 
-    public void clickButtonSaveLink() {
+    private void clickButtonSaveLink() {
         $(By.linkText(BUTTON_SAVE_LINK)).click();
     }
 
@@ -128,6 +124,5 @@ public class CreateNewPostPopUp {
         }
 
     }
-
 
 }

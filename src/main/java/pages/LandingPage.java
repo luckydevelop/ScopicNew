@@ -19,7 +19,6 @@ public class LandingPage {
 
     public LandingPage open() {
         Selenide.open(PropertiesFromFile.getProperties().getProperty("landing.page"));
-        //Selenide.open(PropertiesFromFile.getProperties().getProperty("http://68.169.52.12/EnvyGram/html/"));
         return page(LandingPage.class);
     }
 
@@ -27,16 +26,12 @@ public class LandingPage {
         $(By.id(LOGIN_LINK_ID)).click();
     }
 
-    public LandingPage allElementsLoaded()
-    {
-        ArrayList<By> listLocators = new ArrayList<By>();
+    public LandingPage allElementsLoaded() {
+        ArrayList<By> listLocators = new ArrayList<>();
         listLocators.add(By.id(LOGIN_LINK_ID));
         listLocators.add(By.id(JOIN_BUTTON_ID));
         listLocators.add(By.id(RIGHT_BOTTOM_BUTTONS_ID));
         Helper.allElementsLoaded(listLocators);
         return page(LandingPage.class);
     }
-
-
-
 }

@@ -10,7 +10,7 @@ public class PostPage {
     private static final String TITLE_XPATH = ".//*[@id='content']/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/div[1]";
     private CreateNewPostPopUp createNewPostPopUp = new CreateNewPostPopUp();
 
-    public String getPostDescription() {
+    private String getPostDescription() {
         return $(By.xpath(TITLE_XPATH)).getAttribute("title");
     }
 

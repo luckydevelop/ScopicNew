@@ -4,12 +4,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:K:\\Job\\Testing\\Scopic\\src\\main\\resources\\report"}
-        ,features = "src/test/resources/features"
-        ,glue="steps"
-        // ,format = {"html:K:\\Job\\Testing\\Scopic\\src\\test\\resources\\report"}
-        ,format = "html:src"
-
+        plugin = {"src/test/resources/screens"}
+        , features = "src/test/resources/features"
+        , glue = "steps"
 )
 
 public class TestRunner {

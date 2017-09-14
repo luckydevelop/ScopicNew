@@ -4,8 +4,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import gherkin.lexer.He;
-import helpers.Helper;
 import helpers.PropertiesFromFile;
 import org.junit.Assert;
 import pages.HomePage;
@@ -14,12 +12,12 @@ import popups.CreateNewPostPopUp;
 
 public class CreateNewPostSteps {
 
-    LoginWithEmailSteps loginWithEmailSteps = new LoginWithEmailSteps();
-    HomePage homePage = new HomePage();
-    CreateNewPostPopUp createNewPostPopUp = new CreateNewPostPopUp();
-    PostPage postPage = new PostPage();
-    static String mediaType;
-    static String description;
+    private LoginWithEmailSteps loginWithEmailSteps = new LoginWithEmailSteps();
+    private HomePage homePage = new HomePage();
+    private CreateNewPostPopUp createNewPostPopUp = new CreateNewPostPopUp();
+    private PostPage postPage = new PostPage();
+    private static String mediaType;
+    private static String description;
 
     @Given("^User opens HomePage$")
     public void user_opens_HomePage() {
@@ -43,7 +41,7 @@ public class CreateNewPostSteps {
     @And("^User selects media type \"(.*)\"$")
     public void user_selects_media_type_something(String mediaType) {
         createNewPostPopUp.selectMedia(mediaType);
-        this.mediaType=mediaType;
+        this.mediaType = mediaType;
     }
 
     @And("^User adds link on media or uploads it \"(.*)\"$")
@@ -69,13 +67,12 @@ public class CreateNewPostSteps {
 
     @Then("^New post is created$")
     public void new_post_is_created() {
-         String res = postPage.getUploadResult(mediaType);
-         if (mediaType.equals("Image From Computer")||mediaType.equals("Video Link")){
-             Assert.assertEquals("Tittle should be equal", description, res);
-         }
-         else{
-             Assert.assertEquals("Tittle should be equal", "uploaded", res);
-         }
+        String res = postPage.getUploadResult(mediaType);
+        if (mediaType.equals("Image From Computer") || mediaType.equals("Video Link")) {
+            Assert.assertEquals("Tittle should be equal", description, res);
+        } else {
+            Assert.assertEquals("Tittle should be equal", "uploaded", res);
+        }
     }
 
     @Then("^Errors are appears \"(.*)\"$")

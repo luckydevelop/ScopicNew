@@ -1,24 +1,19 @@
 package helpers;
 
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 public class PropertiesFromFile {
 
-    private PropertiesFromFile(){
-
+    private PropertiesFromFile() {
     }
 
     private static Properties properties;
     private static String propertiesFile = "src/main/resources/config.properties";
 
-
-    public static Properties getProperties()
-    {
-        if (properties==null)
-        {
+    public static Properties getProperties() {
+        if (properties == null) {
             try {
                 FileInputStream fis = new FileInputStream(propertiesFile);
                 properties = new Properties();
@@ -27,10 +22,6 @@ public class PropertiesFromFile {
                 e.printStackTrace();
             }
         }
-
         return properties;
     }
-
-
-
 }
