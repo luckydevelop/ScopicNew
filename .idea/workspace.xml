@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="936609af-5c4f-44e9-a163-7930862c032a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TestRunner.java" afterPath="$PROJECT_DIR$/src/test/java/TestRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/log-file.txt" afterPath="$PROJECT_DIR$/src/test/resources/log-file.txt" />
-    </list>
+    <list default="true" id="936609af-5c4f-44e9-a163-7930862c032a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1070,7 +1067,7 @@
       <workItem from="1505352296318" duration="17000" />
       <workItem from="1505395719769" duration="11935000" />
       <workItem from="1505408485288" duration="213000" />
-      <workItem from="1505408713731" duration="2613000" />
+      <workItem from="1505408713731" duration="3089000" />
     </task>
     <servers />
   </component>
@@ -1107,10 +1104,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47680000" />
+    <option name="totallyTimeSpent" value="48156000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-132" width="1936" height="1056" extended-state="7" />
+    <frame x="1912" y="-132" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
