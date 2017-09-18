@@ -28,12 +28,14 @@ public class SignInPopUp {
 
     public SignInPopUp inputUsername(String username) {
         log.info(username);
+        $(By.id(USERNAME_FIELD_ID)).clear();
         $(By.id(USERNAME_FIELD_ID)).click();
         $(By.id(USERNAME_FIELD_ID)).val(username);
         return page(SignInPopUp.class);
     }
 
     public SignInPopUp inputPassword(String password) {
+        $(By.id(PASSWORD_FIELD_ID)).clear();
         $(By.id(PASSWORD_FIELD_ID)).click();
         $(By.id(PASSWORD_FIELD_ID)).val(password);
         return page(SignInPopUp.class);
